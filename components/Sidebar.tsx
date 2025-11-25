@@ -5,16 +5,17 @@ import {
   SheetTitle,
   SheetDescription,
 } from "./ui/sheet";
-import { User, Phone, Settings, Info } from "lucide-react";
+import { User, Phone, Settings, Info, HelpCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 
 interface SidebarProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  onNavigateToFAQ?: () => void;
 }
 
-export function Sidebar({ open, onOpenChange }: SidebarProps) {
+export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent 
@@ -124,6 +125,35 @@ export function Sidebar({ open, onOpenChange }: SidebarProps) {
               </span>
             </Button>
             <Separator className="my-2" style={{ backgroundColor: 'var(--border)' }} />
+            <Button
+              variant="ghost"
+              className="w-full justify-start px-6 py-3 h-auto"
+              style={{
+                borderRadius: 0,
+                transition: 'background-color 0.2s',
+              }}
+              onClick={() => {
+                if (onNavigateToFAQ) {
+                  onNavigateToFAQ();
+                  onOpenChange(false);
+                }
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(var(--color-accent), 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+            >
+              <HelpCircle className="size-5 mr-3" style={{ color: 'var(--foreground)' }} />
+              <span style={{
+                fontFamily: 'var(--font-family-source-sans)',
+                fontSize: 'var(--text-base)',
+                color: 'var(--foreground)',
+              }}>
+                FAQ
+              </span>
+            </Button>
             <Button
               variant="ghost"
               className="w-full justify-start px-6 py-3 h-auto"
