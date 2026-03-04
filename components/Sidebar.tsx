@@ -22,7 +22,7 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
         side="left" 
         className="w-[280px] p-0 bg-card border-border"
         style={{
-          borderRadius: 'var(--radius-card)',
+          borderRadius: "var(--radius-card)",
         }}
       >
         {/* Hidden title and description for accessibility */}
@@ -36,38 +36,38 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
           <div 
             className="text-sidebar-foreground p-6"
             style={{
-              backgroundColor: 'var(--sidebar)',
-              borderTopLeftRadius: 'var(--radius-card)',
-              borderTopRightRadius: 'var(--radius-card)',
+              backgroundColor: "var(--sidebar)",
+              borderTopLeftRadius: "var(--radius-card)",
+              borderTopRightRadius: "var(--radius-card)",
             }}
           >
             <div className="flex items-center gap-3">
               <div 
                 className="w-16 h-16 flex items-center justify-center"
                 style={{
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                  borderRadius: "50%",
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
                 }}
               >
-                <User className="size-8" style={{ color: 'var(--sidebar-foreground)' }} />
+                <User className="size-8" style={{ color: "var(--sidebar-foreground)" }} />
               </div>
               <div>
                 <h2 
                   style={{
-                    color: 'var(--sidebar-foreground)',
-                    fontFamily: 'var(--font-family-poppins)',
-                    fontSize: 'var(--text-xl)',
-                    fontWeight: 'var(--font-weight-semibold)',
+                    color: "var(--sidebar-foreground)",
+                    fontFamily: "var(--font-family-poppins)",
+                    fontSize: "var(--text-xl)",
+                    fontWeight: "var(--font-weight-semibold)",
                   }}
                 >
                   Agenda
                 </h2>
                 <p 
                   style={{
-                    color: 'var(--sidebar-foreground)',
+                    color: "var(--sidebar-foreground)",
                     opacity: 0.8,
-                    fontFamily: 'var(--font-family-source-sans)',
-                    fontSize: 'var(--text-sm)',
+                    fontFamily: "var(--font-family-source-sans)",
+                    fontSize: "var(--text-sm)",
                   }}
                 >
                   Meus Contatos
@@ -83,20 +83,20 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
               className="w-full justify-start px-6 py-3 h-auto"
               style={{
                 borderRadius: 0,
-                transition: 'background-color 0.2s',
+                transition: "background-color 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(var(--color-accent), 0.1)';
+                e.currentTarget.style.backgroundColor = "rgba(var(--color-accent), 0.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.backgroundColor = "transparent";
               }}
             >
-              <Phone className="size-5 mr-3" style={{ color: 'var(--foreground)' }} />
+              <Phone className="size-5 mr-3" style={{ color: "var(--foreground)" }} />
               <span style={{
-                fontFamily: 'var(--font-family-source-sans)',
-                fontSize: 'var(--text-base)',
-                color: 'var(--foreground)',
+                fontFamily: "var(--font-family-source-sans)",
+                fontSize: "var(--text-base)",
+                color: "var(--foreground)",
               }}>
                 Contatos
               </span>
@@ -106,31 +106,31 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
               className="w-full justify-start px-6 py-3 h-auto"
               style={{
                 borderRadius: 0,
-                transition: 'background-color 0.2s',
+                transition: "background-color 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(var(--color-accent), 0.1)';
+                e.currentTarget.style.backgroundColor = "rgba(var(--color-accent), 0.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.backgroundColor = "transparent";
               }}
             >
-              <Settings className="size-5 mr-3" style={{ color: 'var(--foreground)' }} />
+              <Settings className="size-5 mr-3" style={{ color: "var(--foreground)" }} />
               <span style={{
-                fontFamily: 'var(--font-family-source-sans)',
-                fontSize: 'var(--text-base)',
-                color: 'var(--foreground)',
+                fontFamily: "var(--font-family-source-sans)",
+                fontSize: "var(--text-base)",
+                color: "var(--foreground)",
               }}>
                 Configurações
               </span>
             </Button>
-            <Separator className="my-2" style={{ backgroundColor: 'var(--border)' }} />
+            <Separator className="my-2" style={{ backgroundColor: "var(--border)" }} />
             <Button
               variant="ghost"
               className="w-full justify-start px-6 py-3 h-auto"
               style={{
                 borderRadius: 0,
-                transition: 'background-color 0.2s',
+                transition: "background-color 0.2s",
               }}
               onClick={() => {
                 if (onNavigateToFAQ) {
@@ -139,17 +139,17 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
                 }
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(var(--color-accent), 0.1)';
+                e.currentTarget.style.backgroundColor = "rgba(var(--color-accent), 0.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.backgroundColor = "transparent";
               }}
             >
-              <HelpCircle className="size-5 mr-3" style={{ color: 'var(--foreground)' }} />
+              <HelpCircle className="size-5 mr-3" style={{ color: "var(--foreground)" }} />
               <span style={{
-                fontFamily: 'var(--font-family-source-sans)',
-                fontSize: 'var(--text-base)',
-                color: 'var(--foreground)',
+                fontFamily: "var(--font-family-source-sans)",
+                fontSize: "var(--text-base)",
+                color: "var(--foreground)",
               }}>
                 FAQ
               </span>
@@ -159,20 +159,20 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
               className="w-full justify-start px-6 py-3 h-auto"
               style={{
                 borderRadius: 0,
-                transition: 'background-color 0.2s',
+                transition: "background-color 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(var(--color-accent), 0.1)';
+                e.currentTarget.style.backgroundColor = "rgba(var(--color-accent), 0.1)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.backgroundColor = "transparent";
               }}
             >
-              <Info className="size-5 mr-3" style={{ color: 'var(--foreground)' }} />
+              <Info className="size-5 mr-3" style={{ color: "var(--foreground)" }} />
               <span style={{
-                fontFamily: 'var(--font-family-source-sans)',
-                fontSize: 'var(--text-base)',
-                color: 'var(--foreground)',
+                fontFamily: "var(--font-family-source-sans)",
+                fontSize: "var(--text-base)",
+                color: "var(--foreground)",
               }}>
                 Sobre
               </span>
@@ -183,10 +183,10 @@ export function Sidebar({ open, onOpenChange, onNavigateToFAQ }: SidebarProps) {
           <div 
             className="p-4 text-center"
             style={{
-              borderTop: '1px solid var(--border)',
+              borderTop: "1px solid var(--border)",
             }}
           >
-            <p className="caption" style={{ color: 'var(--muted-foreground)' }}>
+            <p className="caption" style={{ color: "var(--muted-foreground)" }}>
               Versão 1.0.0
             </p>
           </div>

@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { ArrowLeft, Save, Camera, Check, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -37,13 +36,13 @@ interface ContactPageProps {
 }
 
 export function ContactPage({ contact, onSave, onBack }: ContactPageProps) {
-  const [editedContact, setEditedContact] = useState<Contact>({
-    id: contact?.id || Date.now().toString(),
+  const [editedContact, setEditedContact] = useState<Contact>(() => ({
+    id: contact?.id || crypto.randomUUID(),
     name: contact?.name || "",
     email: contact?.email || "",
     phone: contact?.phone || "",
     img: contact?.img || "",
-  });
+  }));
   const [userEdited, setUserEdited] = useState(false);
   const [showDiscardDialog, setShowDiscardDialog] = useState(false);
   const [showImageDialog, setShowImageDialog] = useState(false);
@@ -193,10 +192,10 @@ export function ContactPage({ contact, onSave, onBack }: ContactPageProps) {
               className="flex-1"
               onClick={handleBack}
               style={{
-                borderRadius: 'var(--radius-button)',
-                borderColor: 'var(--border)',
-                color: 'var(--foreground)',
-                fontFamily: 'var(--font-family-poppins)',
+                borderRadius: "var(--radius-button)",
+                borderColor: "var(--border)",
+                color: "var(--foreground)",
+                fontFamily: "var(--font-family-poppins)",
               }}
             >
               Cancelar
@@ -206,10 +205,10 @@ export function ContactPage({ contact, onSave, onBack }: ContactPageProps) {
               className="flex-1"
               onClick={handleSave}
               style={{
-                backgroundColor: 'var(--primary)',
-                color: 'var(--primary-foreground)',
-                borderRadius: 'var(--radius-button)',
-                fontFamily: 'var(--font-family-poppins)',
+                backgroundColor: "var(--primary)",
+                color: "var(--primary-foreground)",
+                borderRadius: "var(--radius-button)",
+                fontFamily: "var(--font-family-poppins)",
               }}
             >
               <Save className="size-5 mr-2" />

@@ -14,13 +14,13 @@ export function HamburgerButton({ onClick, className = "" }: HamburgerButtonProp
       onClick={onClick}
       className={`hover:bg-transparent ${className}`}
       style={{
-        borderRadius: 'var(--radius-button)',
+        borderRadius: "var(--radius-button)",
       }}
       aria-label="Abrir menu"
     >
       <Menu 
         className="size-6" 
-        style={{ color: 'var(--primary-foreground)' }} 
+        style={{ color: "var(--primary-foreground)" }} 
       />
     </Button>
   );

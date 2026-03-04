@@ -37,14 +37,14 @@ export default function App() {
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
-  useEffect(() => {
-    loadContacts();
-  }, []);
-
   const loadContacts = () => {
     const allContacts = contactStorage.getAll();
     setContacts(allContacts);
   };
+
+  useEffect(() => {
+    loadContacts();
+  }, []);
 
   const handleContactClick = (contact: Contact) => {
     setSelectedContact(contact);
