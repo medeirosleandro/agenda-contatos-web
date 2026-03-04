@@ -7,6 +7,7 @@ import { ContactPage } from "./components/ContactPage";
 import { FAQPage } from "./components/FAQPage";
 import { Sidebar } from "./components/Sidebar";
 import { HamburgerButton } from "./components/HamburgerButton";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { contactStorage, Contact } from "./lib/contactStorage";
 import {
   DropdownMenu,
@@ -113,7 +114,8 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <ErrorBoundary>
+      <div className="min-h-screen bg-background flex flex-col">
       {/* AppBar */}
       <div className="bg-primary text-primary-foreground p-4 flex items-center justify-between sticky top-0 z-10 shadow-sm">
         <HamburgerButton
@@ -204,5 +206,6 @@ export default function App() {
         </AlertDialogContent>
       </AlertDialog>
     </div>
+    </ErrorBoundary>
   );
 }
